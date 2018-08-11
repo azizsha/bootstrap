@@ -1,0 +1,24 @@
+{% extends "glav/index.html" %}
+{% block content %}
+{% for val in object_list%}
+<div class="post-preview">
+            <a href="post.html">
+              <h2 class="post-title"> <a href="/news/{{val.id}}">
+                {{val.title}}
+              </h2></a>
+              <h3 class="post-subtitle">
+                {{val.opisanie}}
+              </h3>
+            </a>
+            <p class="post-meta">Posted by
+              <a href="#">Aziz</a>
+              on {{val.date}}</p>
+          </div>
+
+
+
+{% endfor %}
+<div class="clearfix">
+  <a class="btn btn-primary float-right" href="/ind/posts">Все посты →</a>
+</div>
+{% endblock %}
